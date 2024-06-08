@@ -1,0 +1,27 @@
+@mixin transformScale($size: 1) {
+  transform: scale($size);
+}
+
+@mixin breakpoints($point) {
+  @if ($point == "small_mobile") {
+    @media (max-width: 350px) {
+      @content;
+    }
+  } @else if ($point == "mobile") {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if ($point == "medium") {
+    @media (min-width: 768px) and (max-width: 992px) {
+      @content;
+    }
+  } @else if ($point == "large") {
+    @media (min-width: 993px) and (max-width: 1200px) {
+      @content;
+    }
+  } @else if ($point == "xlarge") {
+    @media (min-width: 1201px) {
+      @content;
+    }
+  }
+}

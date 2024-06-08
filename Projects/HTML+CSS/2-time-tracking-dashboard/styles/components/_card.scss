@@ -1,0 +1,134 @@
+@use "./mixins" as *;
+.projects {
+  padding: 3.5rem;
+  background-color: var(--color-background);
+  border-radius: var(--default-radius);
+
+  @include breakpoints("small_mobile") {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  gap: var(--default-padding);
+
+  & .card__filter__list {
+    height: 5rem;
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    & .item {
+      padding: 1rem 2rem;
+      border-radius: calc(var(--default-radius) / 3);
+      margin-right: 0.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-dark-blue);
+    border-radius: var(--default-radius);
+    overflow: hidden;
+
+    & .card__img {
+      width: 100%;
+      position: relative;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: var(--transition-1);
+      }
+
+      &:hover img {
+        @include transformScale(1.1);
+      }
+
+      & .card__img__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%) scale(var(--scale));
+        background: var(--color-desaturated-blue);
+        color: var(--color-white);
+        font-size: 2rem;
+        padding: 1.8rem;
+        border-radius: 1.2rem;
+        opacity: 0;
+        transition: var(--transition-1);
+      }
+
+      & > a:hover .card__img__icon {
+        --scale: 1;
+        opacity: 1;
+      }
+    }
+
+    & .card__data {
+      padding: var(--default-padding);
+
+      & .card__data__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .card__title {
+          & .card__name {
+            font-size: 2.4rem;
+            font-weight: 300;
+          }
+          & .card__type {
+            font-size: 1.2rem;
+            font-weight: 400;
+          }
+        }
+        & .card__button {
+          padding: 0.5rem 0.7rem;
+          background-color: var(--color-desaturated-blue);
+          border-radius: calc(var(--default-radius) / 3);
+        }
+      }
+
+      & .card__stack {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: var(--default-padding);
+        font-size: 1.2rem;
+
+        & .stack__title {
+          font-weight: 300;
+        }
+
+        & .stack__languages {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+
+          & .language {
+            display: inline-block;
+            background-color: var(--color-desaturated-blue);
+            border-radius: calc(var(--default-radius) / 3);
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoints("medium") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoints("mobile") {
+    grid-template-columns: 1fr;
+  }
+}

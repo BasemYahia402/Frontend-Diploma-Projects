@@ -1,0 +1,41 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+  color: var(--color-white);
+  background-color: var(--color-very-dark-blue);
+}
+
+.container {
+  max-width: calc(var(--container-width) + calc(var(--gutter) * 2));
+  min-height: 100vh;
+  margin: 2rem auto;
+  padding-inline: var(--gutter);
+  padding-bottom: 2rem;
+
+  // @media (max-width: 350px) {
+  //   padding-inline: calc(var(--gutter) / 2);
+  // }
+}
+
+.heading2 h2 {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.heading2 h2::after {
+  content: "";
+  position: absolute;
+  bottom: -0.8rem;
+  left: 0;
+  width: 5rem;
+  height: 0.5rem;
+  background-color: var(--color-desaturated-blue);
+  border-radius: var(--default-radius);
+}
+.active {
+  background-color: #5646e9;
+}

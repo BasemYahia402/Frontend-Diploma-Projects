@@ -1,0 +1,28 @@
+@import "./mixins";
+
+.projects {
+  &__main {
+    @include twoColumns(7.4rem, 7.5rem);
+    display: grid;
+  }
+
+  &__img {
+    max-width: 100%;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  }
+
+  &__data {
+    align-self: center;
+  }
+
+  &__description {
+    line-height: 1.5;
+  }
+
+  &__link {
+    color: var(--color-darker-blue);
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-medium);
+    margin-top: 2.3rem;
+  }
+}

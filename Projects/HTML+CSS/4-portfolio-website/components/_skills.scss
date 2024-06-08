@@ -1,0 +1,33 @@
+.section-skills{
+   grid-template-columns: repeat(1, auto);
+}
+
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.skills__item {
+  padding: 35px;
+  transition: var(--transition-timing);
+  user-select: none;
+  background-color:var(--color-link-bg);
+  // background-color: #212123;
+  color: var(--color-white);
+  text-align: center;
+}
+.skills__item:hover {
+  transform: scale(0.98) translateY(-6px);
+}
+.skills__title {
+  font-size: var(--font-size-38);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.skills__years {
+  display: inline-block;
+  font-size: var(--font-size-20);
+  margin-top: 1rem;
+}
+

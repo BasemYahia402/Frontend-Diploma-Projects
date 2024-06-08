@@ -1,0 +1,28 @@
+:root {
+  --container-width: 123rem;
+  --gutter: 2rem;
+
+  --background-color: #f8f8f8;
+  --text-color-opacity: #4f566525;
+  --text-color: #4f5665;
+  --heading-color: #0b132a;
+  --white-color: #ffffff;
+  --red-color: #f53838;
+  --linear-gradient: linear-gradient(
+    180deg,
+    #f8f8f8 -45.04%,
+    rgba(248, 248, 248, 0) 88.56%
+  );
+
+  --box-shadow-light: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow: var(--box-shadow-light);
+
+  --scrollbar-width: 1.2rem;
+  --scrollbar-border-radius: 0.8rem;
+
+  --font-family-rubik: "rubik", sans-serif;
+
+  --line-height: 5rem;
+
+  --transition-timing: 0.5s;
+}

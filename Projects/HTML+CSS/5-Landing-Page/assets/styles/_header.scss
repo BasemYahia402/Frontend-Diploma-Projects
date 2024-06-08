@@ -1,0 +1,66 @@
+header {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 4;
+  margin-bottom: 6rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: var(--box-shadow);
+  background-color: var(--background-color);
+
+  & .logo {
+    width: 10rem;
+    color: var(--heading-color);
+    font-size: 2rem;
+    margin-right: 4rem;
+    & img {
+      margin-right: 1rem;
+    }
+    & span {
+      font-weight: bold;
+    }
+  }
+
+  & nav {
+    grid-row: 1/2;
+    grid-column: 2/3;
+
+    & .links {
+      width: 46rem;
+      cursor: pointer;
+      transition: color 0.5s ease;
+
+      & .link__item:hover {
+        color: var(--red-color);
+      }
+    }
+
+    & .btns {
+      width: 22rem;
+      font-weight: bold;
+      color: var(--heading-color);
+      text-transform: capitalize;
+
+      & .sign__up {
+        height: 4rem;
+        line-height: 3.5rem;
+        padding-inline: 4rem;
+        border-radius: 50px;
+        border: 1px solid var(--red-color);
+        color: var(--red-color);
+        cursor: pointer;
+        transition: color 0.5s ease;
+        &:hover {
+          background-color: var(--red-color);
+          color: var(--white-color);
+        }
+      }
+    }
+  }
+
+  .burger-menu__checkbox {
+    display: none;
+  }
+}

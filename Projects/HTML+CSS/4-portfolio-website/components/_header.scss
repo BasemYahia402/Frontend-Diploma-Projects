@@ -1,0 +1,110 @@
+.header {
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--color-background);
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-timing); /* for responsive screens */
+  background-color: var(--color-background); /* for responsive screens */
+}
+
+.navigation__logo {
+  font-weight: var(--font-weight-bold);
+}
+.navigation__logo__First-char {
+  display: inline-block;
+  padding: 10px 14px;
+  text-align: center;
+  background-color: var(--color-Accent);
+  border-radius: 50%;
+  color: var(--color-white);
+}
+.navigation__list {
+  display: flex;
+  gap: 2rem;
+}
+.navigation__link {
+  position: relative;
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+
+.navigation__link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  transition: 0.7s;
+  background: var(--color-Accent);
+}
+.navigation__link:hover::after {
+  width: 100%;
+}
+
+.container:has(#bio:target) .navigation__bio,
+.container:has(#skills:target) .navigation__skills,
+.container:has(#media:target) .navigation__media,
+.container:has(#projects:target) .navigation__projects,
+.container:has(#clients:target) .navigation__clients,
+.container:has(#contact:target) .navigation__contact {
+  color: var(--color-Accent);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Toggle Component */
+.toggle {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle__title {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-18);
+}
+
+.toggle__label {
+  width: 4.5rem;
+  height: 2.2rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 1.5rem;
+  display: block;
+  position: relative;
+  background-color: var(--color-black);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle__label::after {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--color-white);
+  transition: 0.3s;
+}
+
+.toggle__checkbox {
+  display: none;
+}
+
+.toggle__checkbox:checked + .toggle__label {
+  background: var(--color-white);
+}
+
+.toggle__checkbox:checked + .toggle__label::after {
+  transform: translateX(2.1rem);
+  background: var(--color-green);
+}

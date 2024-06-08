@@ -1,0 +1,64 @@
+@import "./mixins";
+
+.contact {
+  @include twoColumns(20rem, 0);
+  align-items: center;
+
+  &__description {
+    font-size: var(--font-size-20);
+    line-height: 1.9;
+  }
+
+  &__email {
+    font-weight: var(--font-weight-bold);
+    margin: 2.5rem 0;
+  }
+
+  &__social {
+    transition: var(--transition-timing);
+
+    & img {
+      color: var(--color-white);
+    }
+  }
+
+  &__social:hover {
+    transform: scale(1.2);
+  }
+
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  &__input {
+    outline: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-text);
+    border-bottom: 0.1rem solid var(--color-border);
+    flex: 1;
+  }
+
+  &__textarea {
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  &__button {
+    background-color: var(--color-link-bg);
+    color: var(--color-white);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-24);
+    padding: 1.7rem 1.8rem;
+    margin-top: 3.4rem;
+    cursor: pointer;
+  }
+
+  form:invalid::after {
+    content: "*";
+    font-size: var(--font-size-38);
+    color: var(--color-red);
+  }
+}
