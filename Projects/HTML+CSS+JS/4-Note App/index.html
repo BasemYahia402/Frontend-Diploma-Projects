@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="content of description" />
+    <meta name="copyright" content="Your Company Or Brand Name" />
+    <meta name="author" content="Basem" />
+    <title>Note app</title>
+    <link rel="stylesheet" href="styles/style.scss" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="aside__bars">
+        <img src="assets/Menu.png" alt="Menu-icon" class="bars__menu" />
+        <img
+          src="assets/cancel.png"
+          alt="close-Menu-icon"
+          class="bars__close hide"
+        />
+      </div>
+      <h1 class="title">Almdrasa-Notes</h1>
+      <div class="icons">
+        <img
+          src="assets/search-icon-dark.png"
+          alt="search-icon-dark"
+          class="search__btn"
+        />
+        <img
+          src="assets/cancel.png"
+          alt="cancel-icon-dark"
+          class="search__close hide"
+        />
+      </div>
+      <div class="search hide">
+        <div class="search__icon">
+          <img src="assets/search-icon-light.png" alt="" />
+        </div>
+        <div class="search__input">
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+    </nav>
+    <div class="App">
+      <aside class="Aside__App" id="Aside__App">
+        <h1 class="title">Almdrasa-Notes</h1>
+        <div class="search d-none">
+          <div class="search__icon">
+            <img src="assets/search-icon-light.png" alt="search-icon-light" />
+          </div>
+          <div class="search__input">
+            <input type="text" placeholder="Search" />
+          </div>
+        </div>
+
+        <div class="btns">
+          <button class="btn__Notes active">Notes</button>
+          <button class="btn__add" id="aside__btn__add">Add Notes</button>
+        </div>
+      </aside>
+
+      <main class="Note__App" id="noteSection">
+        <div class="container__Notes">
+          <aside class="Aside__Note">
+            <div class="pinned__Note">
+              <h1 class="pinned__Note__Title">PINNED</h1>
+              <div class="pinned__Notes__items"></div>
+            </div>
+
+            <div class="Notes">
+              <div class="bottom__line"></div>
+              <h1 class="Notes__Title">Notes</h1>
+              <div class="bottom__line"></div>
+              <div class="Notes__items"></div>
+            </div>
+          </aside>
+
+          <div class="container__show__note">
+            <div class="Note__item"></div>
+            <button class="left__arrow hide">&larr;</button>
+            <button class="btn__add" id="btn2_add">+</button>
+          </div>
+        </div>
+        <div class="container__add__note hide">
+          <h1 class="title">Add Note</h1>
+          <form>
+            <div class="note__data">
+              <label for="title">Title*</label>
+              <input type="text" name="title" id="title" />
+            </div>
+            <div class="note__data">
+              <label for="Author">Author*</label>
+              <input type="text" name="Author" id="Author" />
+            </div>
+            <div class="note__data">
+              <label for="content">Your Note*</label>
+              <textarea
+                name="content"
+                id="content"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <div class="form__btns">
+              <button class="btn__add" id="btn__add">Add Note</button>
+              <button class="btn__add" id="btn__add__pined">
+                Add pinned Note
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="scripts/index.js"></script>
+  </body>
+</html>

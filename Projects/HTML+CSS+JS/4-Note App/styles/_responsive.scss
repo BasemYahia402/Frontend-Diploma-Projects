@@ -1,0 +1,76 @@
+@media (max-width: 768px) {
+  .App {
+    .Aside__App {
+      width: 24rem;
+    }
+    .container__show__note {
+      padding: 3rem 2rem 5rem;
+    }
+    .Note__App {
+      margin-left: 24rem;
+      .container__Notes {
+        grid-template-columns: 0.8fr 1fr;
+      }
+    }
+    .container__add__note {
+      width: 100%;
+      padding: 2rem;
+      form {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--light-white);
+  }
+  .App {
+    .Aside__App {
+      margin-left: -27rem;
+      transition: all 0.3s ease-in-out;
+      .title,
+      .search {
+        display: none;
+      }
+    }
+    .Note__App {
+      margin-left: 0;
+      .container__Notes {
+        grid-template-columns: 1fr;
+      }
+      .Note {
+        width: auto;
+      }
+      .container__show__note {
+        display: none;
+      }
+    }
+    .Aside__Note {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .title,
+  .search {
+    margin-bottom: 0;
+  }
+  .search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .App .container__add__note form .form__btns button {
+    padding: 1rem 1.3rem;
+  }
+}
