@@ -1,0 +1,19 @@
+{
+  "name": "local-version",
+  "version": "1.0.0",
+  "description": "The Github User Search App is a web-based tool facilitating quick search and exploration of Github users. Leveraging Github's API, it offers a streamlined interface to discover user profiles, repositories, followers, and contributions. With its efficient design, users can effortlessly navigate and explore Github's vast ecosystem.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^5.1.4"
+  },
+  "devDependencies": {
+    "sass": "^1.71.1"
+  }
+}

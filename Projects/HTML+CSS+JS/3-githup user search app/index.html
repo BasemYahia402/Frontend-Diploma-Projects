@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="content of description" />
+    <meta name="copyright" content="Your Company Or Brand Name" />
+    <meta name="author" content="Basem" />
+
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/styles.scss" />
+
+    <title>Github User Search App</title>
+  </head>
+  <body>
+    <div class="container d-flex">
+      <p class="logo">repo-finder</p>
+      <div class="relative">
+        <div class="SearchForm d-flex">
+          <form class="form relative">
+            <div class="choices">
+              <label>
+                <input name="searchType" type="radio" value="users" checked />
+                Users
+              </label>
+              <label>
+                <input name="searchType" type="radio" value="org" />
+                Organizations</label
+              >
+            </div>
+            <div class="search">
+            <img src="assets/search-icon.svg" alt="search icon" width="20px">
+            <input
+              type="text"
+              class="searchInput"
+              placeholder="Search GitHub"
+              aria-label="search-input"
+              required
+            />
+            </div>
+            <button class="button" type="submit">Search</button>
+          </form>
+        </div>
+
+        <div class="loader hidden"></div>
+
+        <p class="message"></p>
+      </div>
+
+      <div class="cards">Start your search...</div>
+    </div>
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
+</html>
