@@ -1,0 +1,18 @@
+.container {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color);
+}
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}

@@ -1,0 +1,21 @@
+@media (max-width: 767px) {
+  .App {
+    width: 38rem;
+    font-size: 1.5rem;
+
+    .btns-desktop {
+      display: none;
+    }
+    .btns-mobile {
+      display: flex;
+    }
+  }
+  .message {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .App {
+    width: 30rem;
+  }
+}

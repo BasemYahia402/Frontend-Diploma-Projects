@@ -1,0 +1,26 @@
+**html**
+- meta done
+- head done
+- main done
+
+**css**
+- reset done
+- custom done
+- animation done
+- variable => improve color done
+
+
+**js** 
+- theme [done]
+- elements [done]
+- addTask [done]
+- deletTask [done]
+- saveToDb [done]
+- fetechaFromDb [done]
+- checked [done]
+- hide image of task that are not checked in dark theme [not work]
+- btns all , active , completed , clear completed [done]
+- drag and drop in desktop and mobile [desktop is done, mobile is done]
+- count of task [done]
+- change style of btns all, active, completed in mobile [done]
+*** 

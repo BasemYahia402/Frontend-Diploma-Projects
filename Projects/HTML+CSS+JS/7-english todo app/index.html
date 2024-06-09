@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Todo app to write and  manage your tasks in a simple way"
+    />
+    <meta name="copyright" content="Basem" />
+    <meta name="author" content="Basem" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/style.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Todo app</title>
+  </head>
+  <body>
+    <main>
+      <div class="image-section" id="image-section"></div>
+      <div class="container">
+        <div class="App">
+          <div
+            class="App__header d-flex justify-content-between align-items-center"
+          >
+            <h1 class="App__title">TODO</h1>
+            <div class="App--theme">
+              <img
+                src="images/icon-moon.svg"
+                alt="icon-moon"
+                class="icon__theme moon"
+              />
+              <img
+                src="images/icon-sun.svg"
+                alt="icon-sun"
+                class="icon__theme sun hide"
+              />
+            </div>
+          </div>
+          <div class="App__input">
+            <form class="d-flex justify-content-between align-items-center">
+              <div class="TaskList__checkbox__input">
+                <div class="circle2"></div>
+              </div>
+              <input
+                type="text"
+                name="taskInput"
+                id="taskInput"
+                required
+                placeholder="Create a new todo..."
+                class="taskInput"
+              />
+              <button class="TaskSearchBar__button">Add</button>
+            </form>
+          </div>
+          <div class="App__list">
+            <ul class="TasksList"></ul>
+
+            <div class="App__btns d-flex justify-content-between">
+              <span class="count__tasks">0 items left</span>
+              <div class="btns-desktop d-flex justify-content-between">
+                <button class="btn-all active">All</button>
+                <button class="btn-active">Active</button>
+                <button class="btn-complete">Completed</button>
+              </div>
+              <button class="btn-clear">Clear completed</button>
+            </div>
+          </div>
+          <div class="btns-mobile d-flex justify-content-between">
+            <button class="btn-all active">All</button>
+            <button class="btn-active">Active</button>
+            <button class="btn-complete">Completed</button>
+          </div>
+        </div>
+        <p class="message">Drag and drop to reorder list</p>
+      </div>
+    </main>
+    <script type="module" src="scripts/index.js"></script>
+  </body>
+</html>

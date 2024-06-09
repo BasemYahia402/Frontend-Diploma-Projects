@@ -1,0 +1,32 @@
+:root {
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --white: white;
+  --black: hsl(235, 19%, 35%);
+  --dark-bg: #181824;
+  --dark-bg-app: #25273c;
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Dark-Grayish-Blue-transparent: hsl(236, 9%, 61%, 0.21);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+
+  --blue: hsl(220, 98%, 61%);
+  --background-gradiant: linear-gradient(
+    to bottom right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+
+  --bg-color: var(--Very-Light-Gray);
+  --bg-color-app: var(--white);
+  --color: var(--black);
+  --color-checked: var(--Dark-Grayish-Blue);
+  --border-color: var(--Dark-Grayish-Blue-transparent);
+
+  --ff-Josefin: "Josefin Sans", sans-serif;
+  --fs: 1.6rem;
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --default-padding: 2rem;
+  --border-radius: 0.5rem;
+  --timing-animation: 0.2s;
+}
