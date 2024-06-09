@@ -1,0 +1,14 @@
+@mixin linkStyle {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray);
+  transition: all var(--timing-animation);
+  border: 0;
+  font-family: inherit;
+  background: transparent;
+}
+
+@mixin activeLink {
+  color: var(--color-link);
+  text-shadow: 0 0 2px var(--color-blue);
+}

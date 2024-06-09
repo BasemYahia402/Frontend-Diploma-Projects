@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Todo app built with React.js" />
+    <meta name="copyright" content="Your Company Or Brand Name" />
+    <meta name="author" content="Basem" />
+
+    <link rel="icon" href="./assets/favicon.ico" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./styles/styles.scss" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  </head>
+  <body>
+    <main class="App">
+      <header class="Header">
+        <button class="DarkThemeToggle">
+          <span class="DarkThemeToggle__activate">تفعيل</span>
+          <span class="DarkThemeToggle__deactivate">إيقاف</span>
+          <span class="DarkThemeToggle__fixed">الوضع الليلي</span>
+
+          <input id="toggle" class="toggle__checkbox" type="checkbox" />
+          <label class="toggle__label" for="toggle"></label>
+        </button>
+        <div class="SocialLinks">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img
+              class="SocialLinks__img"
+              src="./assets/icon-facebook.svg"
+              alt="facebook icon"
+            />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img
+              class="SocialLinks__img"
+              src="./assets/icon-twitter.svg"
+              alt="twitter icon"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/basem-yahia-abdul-latif-b6353a224/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="SocialLinks__img"
+              src="./assets/linkedin.svg"
+              alt="youtube icon"
+            />
+          </a>
+          <a
+            href="https://github.com/BasemYahia402"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="SocialLinks__img"
+              src="./assets/icon-github.svg"
+              alt="github icon"
+            />
+          </a>
+        </div>
+      </header>
+
+      <div class="App__wrapper">
+        <div class="TaskSearchBar">
+          <label for="search-input" class="TaskSearchBar__label">
+            قائمة المهام
+          </label>
+          <form class="TaskSearchBar__searchContent">
+            <input
+              id="search-input"
+              class="TaskSearchBar__input"
+              type="text"
+              placeholder="قم بإضافة مهمه..."
+              required
+            />
+            <button class="TaskSearchBar__button">إضافة</button>
+          </form>
+        </div>
+
+        <div class="TaskList">
+          <button class="TaskList__link">
+            <span class="show">إظهار</span
+            ><span class="hide">إخفاء</span> المهام المكتملة
+          </button>
+          <ul class="TaskList__list"></ul>
+        </div>
+      </div>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <button class="popup__close">&times;</button>
+          <p id="popup-message" class="popup__message">
+            Popup message goes here.
+          </p>
+          <button class="popup--yes">نعم</button>
+          <button class="popup--no">لا</button>
+        </div>
+      </div>
+    </main>
+    <script src="./scripts/index.js" type="module"></script>
+  </body>
+</html>
