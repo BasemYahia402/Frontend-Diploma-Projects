@@ -3,7 +3,7 @@ import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
 import StyledCard from "./StyledCard";
 import Box from "@mui/material/Box";
-
+import React from "react";
 function LoadingArticle() {
   return (
     <StyledCard>
