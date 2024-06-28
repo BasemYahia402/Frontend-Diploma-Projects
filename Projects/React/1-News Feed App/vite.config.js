@@ -1,7 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  base: "/News-Feed-App/", // Replace 'your-repository-name' with your actual repository name
+  build: {
+    outDir: "dist",
+  },
+  // Add other Vite configurations as needed
+});
